@@ -1,0 +1,26 @@
+// Prisma schema for SkillLens AI
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  createdAt DateTime  @default(now())
+  analyses  Analysis[]
+}
+
+model Analysis {
+  id        String    @id @default(cuid())
+  role      String
+  skillsGap String
+  roadmap   String
+  createdAt DateTime  @default(now())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+}
