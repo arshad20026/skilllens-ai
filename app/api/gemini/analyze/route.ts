@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { NextRequest, NextResponse } from "next/server";
 import { analyzeSkillGap } from "@/lib/gemini";
 import { prisma } from "@/lib/prisma";
