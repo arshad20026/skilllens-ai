@@ -52,7 +52,7 @@ export default function Dashboard() {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = `skillgap-${role.replace(/ /g, "-")}-${Date.now()}.pdf`;
+      link.download = `skillgap-${role.replace(/ /g, "-")}-${Date.now()}.txt`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
