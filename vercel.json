@@ -1,0 +1,7 @@
+{
+  "buildCommand": "prisma generate --schema=./prisma/schema.prisma && next build",
+  "installCommand": "npm install",
+  "env": {
+    "PRISMA_SCHEMA_PATH": "./prisma/schema.prisma"
+  }
+}
